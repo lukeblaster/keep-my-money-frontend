@@ -5,10 +5,9 @@ export async function AuthValidate() {
   const cookieStore = await cookies();
   const auth = cookieStore.get("auth");
   const user = cookieStore.get("user");
-  console.log("auth: ", auth);
 
-  if (!auth || !user) {
-    redirect("/login");
-  }
+  // if (!auth || !user) {
+  //   redirect("/login");
+  // }
   return <></>;
 }
