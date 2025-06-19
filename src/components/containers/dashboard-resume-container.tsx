@@ -1,6 +1,6 @@
 "use client";
 import { ArrowUp, ArrowDown, TrendingUpDown } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDashboardData } from "@/hooks/query/use-dashboard-data";
 import { ResumeCard } from "../cards/resume-card";
 import { PaymentFormCard } from "../cards/payment-form-card";
@@ -13,13 +13,36 @@ interface DashboardData {
   valuesByPaymentForm: Array<{ method: string; value: number }>;
 }
 
+interface UserProps {
+  name: string;
+  email: string;
+}
+
 export function DashboardResumeContainer() {
   const { data } = useDashboardData();
+  const [user, setUser] = useState<UserProps | null>(null);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      try {
+        setUser(JSON.parse(user));
+      } catch (e) {
+        console.error("Erro ao fazer parse do user", e);
+      }
+    }
+  }, []);
 
   const response: DashboardData = data;
 
   return (
     <>
+      <div className="flex justify-between items-end">
+        <div>
+          <h2 className="font-semibold">Olá, {user?.name}! 💸</h2>
+          <p className="text-neutral-600">Seja bem-vindo(a) ao seu dashboard</p>
+        </div>
+      </div>
       <div className="grid grid-cols-3 gap-3">
         <ResumeCard
           icon={<ArrowUp className="text-green-600" size={22} />}

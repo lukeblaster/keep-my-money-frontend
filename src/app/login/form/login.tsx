@@ -27,7 +27,7 @@ export const LoginForm = () => {
     mutationFn: signIn,
     onSuccess: (response) => {
       document.location.href = "/painel/dashboard";
-      localStorage.setItem("user", JSON.stringify(response.data.jwt_user));
+      localStorage.setItem("user", JSON.stringify(response.data.data.userInfo));
       toast.success(response.data.message);
     },
     onError: (e: AxiosError) => {

@@ -1,13 +1,14 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+"use client";
 
-export async function AuthValidate() {
-  const cookieStore = await cookies();
-  const auth = cookieStore.get("auth");
-  const user = cookieStore.get("user");
+import { useEffect } from "react";
 
-  // if (!auth || !user) {
-  //   redirect("/login");
-  // }
+export function AuthValidate() {
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (!user) {
+      document.location.href = "/login";
+    }
+  });
+
   return <></>;
 }

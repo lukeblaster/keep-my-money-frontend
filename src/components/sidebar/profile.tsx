@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Cookies from "js-cookie";
 
 interface UserProps {
   name: string;
@@ -13,12 +12,12 @@ export const Profile = () => {
   const [user, setUser] = useState<UserProps | null>(null);
 
   useEffect(() => {
-    const cookie = Cookies.get("user");
-    if (cookie) {
+    const user = localStorage.getItem("user");
+    if (user) {
       try {
-        setUser(JSON.parse(cookie));
+        setUser(JSON.parse(user));
       } catch (e) {
-        console.error("Erro ao fazer parse do cookie", e);
+        console.error("Erro ao fazer parse do user", e);
       }
     }
   }, []);
