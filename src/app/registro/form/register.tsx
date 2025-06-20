@@ -87,7 +87,9 @@ export const RegisterForm = () => {
         <FormInputError>{errors.password_confirm?.message}</FormInputError>
       </div>
       <div className="flex flex-col gap-1">
-        <Button className="mt-1">Registrar</Button>
+        <Button className="mt-1" disabled={mutation.isPending}>
+          Registrar
+        </Button>
         <p className="text-sm text-center">
           Já tem uma conta?{" "}
           <a href="/login" className="font-semibold text-primary-foreground">

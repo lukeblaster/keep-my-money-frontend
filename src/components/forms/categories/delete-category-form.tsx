@@ -93,7 +93,11 @@ export function DeleteCategoryForm({ row }: { row: Row<Category> }) {
                 Cancelar
               </Button>
             </DialogClose>
-            <Button type="submit" variant="destructive">
+            <Button
+              type="submit"
+              variant="destructive"
+              disabled={mutation.isPending}
+            >
               Excluir
             </Button>
           </DialogFooter>

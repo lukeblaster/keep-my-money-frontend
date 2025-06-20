@@ -61,7 +61,11 @@ export function AddBankAccountForm() {
           </Button>
         </DialogClose>
         <DialogClose asChild>
-          <Button type="submit" className="items-center cursor-pointer mb-1.5">
+          <Button
+            type="submit"
+            className="items-center cursor-pointer mb-1.5"
+            disabled={mutation.isPending}
+          >
             Adicionar
           </Button>
         </DialogClose>

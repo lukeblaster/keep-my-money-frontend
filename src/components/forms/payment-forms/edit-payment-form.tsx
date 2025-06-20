@@ -131,7 +131,9 @@ export function EditPaymentForm({ props }: { props: PaymentMethod }) {
             <Button variant="outline">Cancelar</Button>
           </DialogClose>
           <DialogClose asChild>
-            <Button type="submit">Atualizar</Button>
+            <Button type="submit" disabled={mutation.isPending}>
+              Atualizar
+            </Button>
           </DialogClose>
         </DialogFooter>
       </form>

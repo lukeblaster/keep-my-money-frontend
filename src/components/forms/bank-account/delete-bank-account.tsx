@@ -65,7 +65,11 @@ export function DeleteBankAccount(props: DeleteBankAccountInput) {
               Cancelar
             </Button>
           </DialogClose>
-          <Button type="submit" variant="destructive">
+          <Button
+            type="submit"
+            variant="destructive"
+            disabled={mutation.isPending}
+          >
             Excluir
           </Button>
         </DialogFooter>

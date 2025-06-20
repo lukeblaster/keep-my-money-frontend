@@ -63,7 +63,11 @@ export function DeletePaymentForm({ props }: { props: PaymentMethod }) {
             </Button>
           </DialogClose>
           <DialogClose asChild>
-            <Button type="submit" variant="destructive">
+            <Button
+              type="submit"
+              variant="destructive"
+              disabled={mutation.isPending}
+            >
               Excluir
             </Button>
           </DialogClose>

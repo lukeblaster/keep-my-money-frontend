@@ -112,7 +112,11 @@ export function EditCategoryForm({ row }: { row: Row<Category> }) {
                 Cancelar
               </Button>
             </DialogClose>
-            <Button type="submit" variant="default">
+            <Button
+              type="submit"
+              variant="default"
+              disabled={mutation.isPending}
+            >
               Atualizar
             </Button>
           </DialogFooter>

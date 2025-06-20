@@ -101,7 +101,10 @@ export function AddPaymentForm({ bankAccountId }: { bankAccountId: number }) {
             </SelectContent>
           </Select>
         </div>
-        <Button className="items-center cursor-pointer">
+        <Button
+          className="items-center cursor-pointer"
+          disabled={mutation.isPending}
+        >
           <PlusCircle />
           Adicionar forma de pagamento
         </Button>

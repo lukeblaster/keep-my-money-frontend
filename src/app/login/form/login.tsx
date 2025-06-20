@@ -43,6 +43,7 @@ export const LoginForm = () => {
 
     return mutation.mutate({ props: props });
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
       <div>
@@ -57,7 +58,9 @@ export const LoginForm = () => {
         <Input {...register("password")} type="password" placeholder="Senha" />
       </div>
       <div className="flex flex-col gap-1">
-        <Button className="mt-1">Entrar</Button>
+        <Button className="mt-1" disabled={mutation.isPending}>
+          Entrar
+        </Button>
         <p className="text-sm text-center">
           Não tem uma conta?{" "}
           <a href="/registro" className="font-semibold text-primary-foreground">

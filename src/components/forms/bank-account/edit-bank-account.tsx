@@ -62,7 +62,7 @@ export function EditBankAccount({
         <Input defaultValue={props.name} {...register("name")} />
         <FormInputError>{errors.name?.message}</FormInputError>
       </div>
-      <Button type="submit" className="mb-1">
+      <Button type="submit" className="mb-1" disabled={mutation.isPending}>
         Atualizar
       </Button>
     </form>

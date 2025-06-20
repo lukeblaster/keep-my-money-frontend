@@ -91,7 +91,11 @@ export function AddCategoryForm() {
                   Cancelar
                 </Button>
               </DialogClose>
-              <Button type="submit" variant="default">
+              <Button
+                type="submit"
+                variant="default"
+                disabled={mutation.isPending}
+              >
                 Adicionar
               </Button>
             </DialogFooter>

@@ -83,7 +83,11 @@ export function AddYearMonthsForm() {
               <Button variant="outline">Cancelar</Button>
             </DialogClose>
             <DialogClose asChild>
-              <Button type="submit" className="button-secondary">
+              <Button
+                type="submit"
+                className="button-secondary"
+                disabled={mutation.isPending}
+              >
                 Salvar
               </Button>
             </DialogClose>

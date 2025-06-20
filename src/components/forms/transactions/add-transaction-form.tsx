@@ -265,7 +265,11 @@ export function AddTransactionForm({
             <DialogClose asChild>
               <Button variant="outline">Cancelar</Button>
             </DialogClose>
-            <Button type="submit" className="button-secondary">
+            <Button
+              type="submit"
+              className="button-secondary"
+              disabled={mutation.isPending}
+            >
               Adicionar
             </Button>
           </DialogFooter>

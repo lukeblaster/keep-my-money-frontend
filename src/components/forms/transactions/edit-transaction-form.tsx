@@ -322,7 +322,9 @@ export function EditTransactionForm({
                 Cancelar
               </Button>
             </DialogClose>
-            <Button type="submit">Atualizar</Button>
+            <Button type="submit" disabled={mutation.isPending}>
+              Atualizar
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>
