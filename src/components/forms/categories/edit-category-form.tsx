@@ -87,7 +87,7 @@ export function EditCategoryForm({ row }: { row: Row<Category> }) {
           <DialogDescription></DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 mb-1">
             <div className="flex flex-col gap-1">
               <Label>Nome da categoria</Label>
               <Input
