@@ -48,7 +48,7 @@ export default function AppSidebar() {
           </span>
           <div className="flex flex-col leading-none">
             <span className="font-semibold">Keep My Money</span>
-            <span className="text-xs text-gray-600">v1.0.1</span>
+            <span className="text-xs text-gray-600">v1.0.2</span>
           </div>
         </SidebarMenuButton>
       </SidebarHeader>
