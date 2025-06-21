@@ -65,7 +65,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="h-full">
       {/* Cabeçalho */}
-      <div className="flex items-center py-4">
+      <div className="flex items-center py-4 gap-1.5">
         <Input
           placeholder="Digite para filtrar"
           value={globalFilter}

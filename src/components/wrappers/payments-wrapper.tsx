@@ -73,7 +73,7 @@ export function PaymentsWrapper({ id }: { id: string }) {
         </p>
       </div>
       <AddPaymentForm bankAccountId={bank?.id} />
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid md:grid-cols-4 gap-3">
         {bank?.payment_methods?.map((paymentMethod) => (
           <PaymentCard key={paymentMethod.id} props={paymentMethod} />
         ))}

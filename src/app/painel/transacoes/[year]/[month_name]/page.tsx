@@ -1,4 +1,4 @@
-import { TransactionsContainer } from "../../../../../components/containers/transactions-container";
+import { TransactionsContainer } from "@/components/containers/transactions-container";
 
 export default async function Page({
   params,

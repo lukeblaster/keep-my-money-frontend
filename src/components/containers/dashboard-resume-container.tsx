@@ -37,13 +37,13 @@ export function DashboardResumeContainer() {
 
   return (
     <>
-      <div className="flex justify-between items-end">
+      <div className="h-full flex justify-between items-end">
         <div>
           <h2 className="font-semibold">Olá, {user?.name}! 💸</h2>
           <p className="text-neutral-600">Seja bem-vindo(a) ao seu dashboard</p>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="flex flex-col lg:grid grid-cols-3 gap-3">
         <ResumeCard
           icon={<ArrowUp className="text-green-600" size={22} />}
           value={response?.transactionValues[0]?.value}
@@ -60,7 +60,7 @@ export function DashboardResumeContainer() {
           description="Valor de investimento no mês atual"
         />
       </div>
-      <div className="flex w-full gap-3">
+      <div className="flex flex-col lg:flex-row w-full gap-3">
         <PaymentFormCard values={response?.valuesByPaymentForm} />
         <ValuesByCategoryCard values={response?.valuesByCategory} />
         <BalanceCard values={response?.transactionValues} />

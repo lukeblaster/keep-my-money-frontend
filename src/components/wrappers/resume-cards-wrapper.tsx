@@ -57,30 +57,30 @@ export function ResumeCardsWrapper({
   const resumeValue = entryValue - expenseValue - investmentValue;
 
   return (
-    <div className="flex gap-3 w-full mb-6">
+    <div className="grid grid-cols-2 lg:flex gap-3 w-full mb-6">
       <ValueResumeCard
         title="Entradas"
         value={entryValue}
         color="#4ac23f"
-        icon={<FaMoneyBill1 size={26} />}
+        icon={<FaMoneyBill1 className="size-4.5 lg:size-6" />}
       />
       <ValueResumeCard
         title="Saídas"
         value={expenseValue}
         color="#d14c4c"
-        icon={<FaMoneyBills size={26} />}
+        icon={<FaMoneyBills className="size-4.5 lg:size-6" />}
       />
       <ValueResumeCard
         title="Investimentos"
         value={investmentValue}
         color="#4171c9"
-        icon={<FaMoneyBillTrendUp size={26} />}
+        icon={<FaMoneyBillTrendUp className="size-4.5 lg:size-6" />}
       />
       <ValueResumeCard
         title="Saldo do mês"
         value={resumeValue}
         color="#4f5674"
-        icon={<FaScaleBalanced size={26} />}
+        icon={<FaScaleBalanced className="size-4.5 lg:size-6" />}
       />
     </div>
   );
