@@ -11,12 +11,12 @@ export function LoginDesktopView() {
         className="flex flex-col z-10 h-full w-full max-w-[430px] max-h-[1000px] 
           md:ml-auto bg-background gap-4 justify-center p-6 rounded-xl"
       >
-        <div className="leading-3.5">
+        <div className="leading-4">
           <p className="font-bold">
             keep my <span className="text-primary">money</span> 💸
           </p>
           <span className="text-primary-foreground font-semibold text-[12px]">
-            app
+            controle financeiro
           </span>
         </div>
         <LoginForm />
