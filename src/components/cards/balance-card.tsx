@@ -8,7 +8,7 @@ export function BalanceCard({
   values: Array<{ type: string; value: number }>;
 }) {
   return (
-    <Card className="w-2/5 min-h-90">
+    <Card className="lg:w-2/5 min-h-90">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <div className="flex items-center justify-center">
