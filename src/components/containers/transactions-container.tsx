@@ -55,7 +55,7 @@ export function TransactionsContainer({
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between my-0.5">
         <h3 className="font-semibold text-2xl capitalize">
           {month_name == "marco" ? "março" : (month_name as string)}
         </h3>

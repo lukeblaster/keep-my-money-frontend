@@ -10,7 +10,7 @@ export function YearsWrapper() {
   const { data } = useYearsData();
 
   return (
-    <section className="grid grid-cols-4 gap-3">
+    <section className="flex flex-col lg:grid grid-cols-4 gap-3">
       {data?.map((year) => (
         <Link
           key={year.year}

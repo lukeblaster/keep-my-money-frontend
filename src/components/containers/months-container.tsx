@@ -41,7 +41,7 @@ export function MonthsContainer({ year }: { year: number }) {
           Clique no mês desejado para ver suas transações
         </p>
       </div>
-      <section className="grid grid-cols-4 gap-5">
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-5">
         {monthsObject?.map((month) => (
           <Link
             key={month?.id + month?.month}
