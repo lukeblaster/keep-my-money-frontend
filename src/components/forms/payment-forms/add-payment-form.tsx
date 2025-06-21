@@ -67,7 +67,10 @@ export function AddPaymentForm({ bankAccountId }: { bankAccountId: number }) {
   };
   return (
     <div className="flex flex-col gap-3">
-      <form className="flex gap-3 items-end" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="flex flex-col md:flex-row gap-3 md:items-end"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="flex flex-col gap-1">
           <Label>Nome</Label>
           <Input type="text" {...register("name")} />
@@ -86,10 +89,10 @@ export function AddPaymentForm({ bankAccountId }: { bankAccountId: number }) {
             }
             {...register("method")}
           >
-            <SelectTrigger className="min-w-40">
+            <SelectTrigger className="min-w-40 w-full">
               <SelectValue placeholder="Selecione um tipo" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="w-full">
               <SelectGroup>
                 <SelectLabel>Tipos de pagamento</SelectLabel>
                 <SelectItem value="pix">Pix</SelectItem>

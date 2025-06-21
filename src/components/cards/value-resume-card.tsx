@@ -13,16 +13,16 @@ export function ValueResumeCard({
   icon: ReactNode;
 }) {
   return (
-    <Card className={`w-full gap-3`} style={{ color: color }}>
+    <Card className={`w-full gap-1 lg:gap-3`} style={{ color: color }}>
       <CardHeader>
-        <CardTitle className="flex justify-between items-center">
+        <CardTitle className="flex justify-between items-center text-xs md:text-lg">
           {title}
           {icon}
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-semibold">
+          <span className="text-lg md:text-2xl font-semibold">
             {value.toLocaleString("pt-br", {
               style: "currency",
               currency: "BRL",

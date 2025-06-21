@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function Home() {
+export default function Page() {
   redirect("/painel/dashboard");
-  return <div></div>;
 }
