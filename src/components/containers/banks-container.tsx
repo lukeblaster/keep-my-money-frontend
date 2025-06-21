@@ -12,7 +12,7 @@ export function BanksContainer() {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-3 mt-6">
+      <div className="grid lg:grid-cols-3 gap-3 mt-6">
         {bankAccounts.map((bank) => (
           <Link key={bank.id} href={`${pathname}/${bank.id}`}>
             <BankCard props={bank} />
