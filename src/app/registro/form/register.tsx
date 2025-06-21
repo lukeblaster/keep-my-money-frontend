@@ -14,9 +14,13 @@ import { z } from "zod";
 
 const LoginSchema = z
   .object({
-    name: z.string(),
-    email: z.string(),
-    password: z.string(),
+    name: z
+      .string()
+      .min(6, { message: "Nome deve ter no mínimo 6 caracteres." }),
+    email: z.string().email({ message: "E-mail inválido." }),
+    password: z
+      .string()
+      .min(6, { message: "Senha deve ter no mínimo 6 caracteres." }),
     password_confirm: z.string(),
   })
   .superRefine(({ password_confirm, password }, ctx) => {
@@ -50,7 +54,6 @@ export const RegisterForm = () => {
     },
   });
   const onSubmit: SubmitHandler<LoginInput> = (data) => {
-    console.log(data.password, data.password_confirm);
     const props = {
       name: data.name,
       email: data.email,
@@ -67,10 +70,12 @@ export const RegisterForm = () => {
       <div className="flex flex-col gap-1">
         <label className="text-sm font-semibold">Nome</label>
         <Input {...register("name")} placeholder="Nome" />
+        <FormInputError>{errors.name?.message}</FormInputError>
       </div>
       <div className="flex flex-col gap-1">
         <label className="text-sm font-semibold">E-mail</label>
         <Input {...register("email")} placeholder="E-mail" />
+        <FormInputError>{errors.email?.message}</FormInputError>
       </div>
       <div className="flex flex-col gap-1">
         <label className="text-sm font-semibold">Senha</label>
