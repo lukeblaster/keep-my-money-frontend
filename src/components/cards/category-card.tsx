@@ -8,7 +8,7 @@ export function ValuesByCategoryCard({
   values: Array<{ name: string; color: string; value: number }>;
 }) {
   return (
-    <Card className="lg:w-2/5">
+    <Card className="lg:w-2/5 max-h-fit">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <div className="flex items-center justify-center">

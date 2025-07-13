@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Controle de Gastos",
+  title: "Keep My Money",
   description: "Sistema para controle de gastos",
 };
 

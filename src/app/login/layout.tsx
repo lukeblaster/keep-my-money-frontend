@@ -3,7 +3,7 @@ import "../globals.css";
 import { ReactQueryProvider } from "../providers";
 
 export const metadata: Metadata = {
-  title: "Login - Controle de Gastos",
+  title: "Login - Keep My Money",
   description: "Sistema para controle de gastos",
 };
 

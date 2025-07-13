@@ -6,7 +6,7 @@ import { AuthValidate } from "@/components/auth/auth-validate";
 import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: "Controle de Gastos",
+  title: "Painel - Keep My Money",
   description: "Sistema para controle de gastos",
 };
 

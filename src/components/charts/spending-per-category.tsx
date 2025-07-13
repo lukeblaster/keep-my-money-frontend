@@ -6,6 +6,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Skeleton } from "../ui/skeleton";
 
 export function SpendingPerCategory({
   values,
