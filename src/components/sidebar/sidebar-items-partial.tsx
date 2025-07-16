@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons/lib";
@@ -15,7 +16,7 @@ export const SidebarItemPartial = (item: SidebarItemPartialProps) => {
   return (
     <SidebarMenuItem key={item.title}>
       <SidebarMenuButton asChild>
-        <a
+        <Link
           href={`/painel${item.url}`}
           className={`${
             path.includes(item.url) ? "bg-primary" : ""
@@ -23,7 +24,7 @@ export const SidebarItemPartial = (item: SidebarItemPartialProps) => {
         >
           <item.icon className="h-32 w-32 text-gray-700" />
           <span className="font-semibold">{item.title}</span>
-        </a>
+        </Link>
       </SidebarMenuButton>
     </SidebarMenuItem>
   );

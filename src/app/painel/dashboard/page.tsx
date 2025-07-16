@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { DashboardResumeContainer } from "../../../components/containers/dashboard-resume-container";
+import { DashboardResumeContainer } from "@/components/containers/dashboard-resume-container";
 import { cookies } from "next/headers";
 export default async function Home() {
   const cookieStore = await cookies();
