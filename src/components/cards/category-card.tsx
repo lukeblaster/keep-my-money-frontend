@@ -5,7 +5,7 @@ import { SpendingPerCategory } from "../charts/spending-per-category";
 export function ValuesByCategoryCard({
   values,
 }: {
-  values: Array<{ name: string; color: string; value: number }>;
+  values: Array<{ name: string; color: string; value: number; fill: string }>;
 }) {
   return (
     <Card className="lg:w-2/5 max-h-fit">

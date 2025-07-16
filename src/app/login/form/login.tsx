@@ -26,9 +26,8 @@ export const LoginForm = () => {
   const mutation = useMutation({
     mutationFn: signIn,
     onSuccess: (response) => {
-      document.location.href = "/painel/dashboard";
-      localStorage.setItem("user", JSON.stringify(response.data.data.userInfo));
       toast.success(response.data.message);
+      document.location.href = "/painel/dashboard";
     },
     onError: (e: AxiosError) => {
       const error = e.response?.data as ApiError;

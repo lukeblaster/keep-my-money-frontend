@@ -17,6 +17,7 @@ import { useState } from "react";
 import { EditBankAccount } from "../forms/bank-account/edit-bank-account";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import { DeleteBankAccount } from "../forms/bank-account/delete-bank-account";
+import Link from "next/link";
 
 export function PaymentsWrapper({ id }: { id: string }) {
   const [isEditing, setIsEditing] = useState<boolean>(false);
@@ -36,8 +37,8 @@ export function PaymentsWrapper({ id }: { id: string }) {
         <Breadcrumb className="mt-3">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/painel/bancos">
-                Contas de Banco
+              <BreadcrumbLink asChild>
+                <Link href="/painel/bancos">Contas de banco</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />

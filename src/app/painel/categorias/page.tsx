@@ -1,5 +1,5 @@
 "use client";
-import { CategoriesContainer } from "../../../components/containers/categories-container";
+import { CategoriesContainer } from "@/components/containers/categories-container";
 
 export default function Page() {
   return (

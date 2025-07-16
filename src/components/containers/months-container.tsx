@@ -26,8 +26,8 @@ export function MonthsContainer({ year }: { year: number }) {
         <Breadcrumb className="mt-3">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/painel/transacoes">
-                Transações
+              <BreadcrumbLink asChild>
+                <Link href="/painel/transacoes">Transações</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />

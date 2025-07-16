@@ -16,6 +16,7 @@ import {
   TransactionAdapter,
   TransactionAdapterProps,
 } from "../../adapters/transaction-adapter";
+import Link from "next/link";
 
 export function TransactionsContainer({
   year,
@@ -31,21 +32,20 @@ export function TransactionsContainer({
   const transactions =
     TransactionAdapter({ transactions: data || [] }) ??
     ([] as TransactionAdapterProps[]);
-  console.log(transactions);
   return (
     <>
       <div className="flex flex-col">
         <Breadcrumb className="mt-3">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/painel/transacoes">
-                Transações
+              <BreadcrumbLink asChild>
+                <Link href="/painel/transacoes">Transações</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/painel/transacoes/${year}`}>
-                {year}
+              <BreadcrumbLink asChild>
+                <Link href={`/painel/transacoes/${year}`}>{year}</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
