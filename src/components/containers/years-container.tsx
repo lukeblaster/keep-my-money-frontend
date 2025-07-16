@@ -1,9 +1,9 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Calendar } from "lucide-react";
-import { useYearsData } from "@/hooks/query/use-years-data";
+import { useYearsData } from "../../hooks/query/use-years-data";
 
 export function YearsWrapper() {
   const pathname = usePathname();

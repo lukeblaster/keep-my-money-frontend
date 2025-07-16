@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import { Tags } from "lucide-react";
 import { SpendingPerCategory } from "../charts/spending-per-category";
 

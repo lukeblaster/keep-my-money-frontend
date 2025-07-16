@@ -1,7 +1,7 @@
 "use client";
 import { ArrowUp, ArrowDown, TrendingUpDown } from "lucide-react";
 import React, { useEffect, useMemo, useState } from "react";
-import { useDashboardData } from "@/hooks/query/use-dashboard-data";
+import { useDashboardData } from "../../hooks/query/use-dashboard-data";
 import { ResumeCard } from "../cards/resume-card";
 import { PaymentFormCard } from "../cards/payment-form-card/payment-form-card";
 import { ValuesByCategoryCard } from "../cards/category-card";

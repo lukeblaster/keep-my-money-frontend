@@ -1,8 +1,8 @@
 "use client";
-import { BankAccount } from "@/types/bank-account";
+import { BankAccount } from "../../types/bank-account";
 import { BankCard } from "../cards/bank-card";
 import Link from "next/link";
-import { useBanksData } from "@/hooks/query/use-banks-data";
+import { useBanksData } from "../../hooks/query/use-banks-data";
 import { usePathname } from "next/navigation";
 
 export function BanksContainer() {

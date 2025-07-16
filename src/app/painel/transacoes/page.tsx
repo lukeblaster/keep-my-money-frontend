@@ -1,4 +1,4 @@
-import { YearsWrapper } from "@/components/containers/years-container";
+import { YearsWrapper } from "../../../components/containers/years-container";
 import { AddYearMonthsForm } from "../../../components/forms/year/add-year-months-form";
 
 export default async function Page() {

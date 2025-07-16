@@ -7,10 +7,10 @@ import {
 } from "react-icons/fa6";
 import { ValueResumeCard } from "../cards/value-resume-card";
 import { useMemo } from "react";
-import { Category } from "@/types/category";
+import { Category } from "../../types/category";
 import { TransactionOnMonth } from "../columns/transactions-columns";
-import { BankAccount } from "@/types/bank-account";
-import { PaymentMethod } from "@/types/payment-method";
+import { BankAccount } from "../../types/bank-account";
+import { PaymentMethod } from "../../types/payment-method";
 
 interface ResumeCardsWrapper {
   id: number;

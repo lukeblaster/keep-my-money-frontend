@@ -1,6 +1,6 @@
 "use client";
-import { deleteTransactionOnMonth } from "@/api/transactions/delete-transaction-month";
-import { Button } from "@/components/ui/button";
+import { deleteTransactionOnMonth } from "../../api/transactions/delete-transaction-month";
+import { Button } from "../ui/button";
 import {
   DialogContent,
   DialogHeader,
@@ -10,8 +10,8 @@ import {
   DialogClose,
   Dialog,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+} from "../ui/dialog";
+import { DropdownMenuItem } from "../ui/dropdown-menu";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Row } from "@tanstack/react-table";
 import { AxiosResponse } from "axios";

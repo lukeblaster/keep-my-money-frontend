@@ -1,6 +1,6 @@
 "use client";
-import { createTransaction } from "@/api/transactions/create-transaction";
-import { Button } from "@/components/ui/button";
+import { createTransaction } from "../../../api/transactions/create-transaction";
+import { Button } from "../../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -10,27 +10,27 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../../ui/dialog";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../ui/select";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { PlusCircle } from "lucide-react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
-import { useCategoryData } from "@/hooks/query/use-category-data";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { useBanksData } from "@/hooks/query/use-banks-data";
+import { useCategoryData } from "../../../hooks/query/use-category-data";
+import { FormInputError } from "../../errors/form-input-error";
+import { useBanksData } from "../../../hooks/query/use-banks-data";
 import { useEffect, useState } from "react";
-import { PaymentMethod } from "@/types/payment-method";
-import { BankAccount } from "@/types/bank-account";
+import { PaymentMethod } from "../../../types/payment-method";
+import { BankAccount } from "../../../types/bank-account";
 import { toast } from "sonner";
 
 const addTransactionSchema = z.object({

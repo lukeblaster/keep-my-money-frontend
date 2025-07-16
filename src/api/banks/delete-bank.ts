@@ -1,4 +1,4 @@
-import { DeleteBankAccountInput } from "@/schema/bank-account";
+import { DeleteBankAccountInput } from "../../schema/bank-account";
 import { instance as axios } from "../axios";
 
 export const deleteBank = async (props: DeleteBankAccountInput) => {

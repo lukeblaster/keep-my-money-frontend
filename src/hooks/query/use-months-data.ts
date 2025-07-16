@@ -1,4 +1,4 @@
-import { getMonths } from "@/api/months/get-months";
+import { getMonths } from "../../api/months/get-months";
 import { useQuery } from "@tanstack/react-query";
 
 export const useMonthsData = () => {

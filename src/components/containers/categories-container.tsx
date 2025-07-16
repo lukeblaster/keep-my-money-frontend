@@ -1,4 +1,4 @@
-import { useCategoryData } from "@/hooks/query/use-category-data";
+import { useCategoryData } from "../../hooks/query/use-category-data";
 import { categoriesColumns } from "../columns/categories-column";
 import { AddCategoryForm } from "../forms/categories/add-category-form";
 import { DataTable } from "../tables/data-table";

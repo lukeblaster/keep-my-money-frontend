@@ -1,4 +1,4 @@
-import { getYears } from "@/api/months/get-years";
+import { getYears } from "../../api/months/get-years";
 import { useQuery } from "@tanstack/react-query";
 
 export const useYearsData = () => {

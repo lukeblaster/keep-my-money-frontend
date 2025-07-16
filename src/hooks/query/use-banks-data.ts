@@ -1,4 +1,4 @@
-import { getBanks } from "@/api/banks/get-banks";
+import { getBanks } from "../../api/banks/get-banks";
 import { useQuery } from "@tanstack/react-query";
 
 export const useBanksData = () => {

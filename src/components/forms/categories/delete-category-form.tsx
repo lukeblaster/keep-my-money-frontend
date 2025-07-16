@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../ui/button";
 import {
   DialogContent,
   DialogHeader,
@@ -9,19 +9,19 @@ import {
   DialogClose,
   Dialog,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "../../ui/dialog";
 import { Row } from "@tanstack/react-table";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { DropdownMenuItem } from "../../ui/dropdown-menu";
 import { Trash } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
-import { deleteCategory } from "@/api/category/delete-category";
+import { deleteCategory } from "../../../api/category/delete-category";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input } from "@/components/ui/input";
-import { Category } from "@/types/category";
-import { ApiError } from "@/types/error";
+import { Input } from "../../ui/input";
+import { Category } from "../../../types/category";
+import { ApiError } from "../../../types/error";
 import { toast } from "sonner";
 
 const deleteTransactionSchema = z.object({

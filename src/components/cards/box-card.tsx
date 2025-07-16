@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+import { Card, CardContent } from "../ui/card";
+import { Progress } from "../ui/progress";
 import { Pencil, PiggyBank } from "lucide-react";
 interface BoxCard {
   id: number;

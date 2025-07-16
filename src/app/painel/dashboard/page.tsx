@@ -1,9 +1,14 @@
-import { DashboardResumeContainer } from "@/components/containers/dashboard-resume-container";
+import { redirect } from "next/navigation";
+import { DashboardResumeContainer } from "../../../components/containers/dashboard-resume-container";
 import { cookies } from "next/headers";
 export default async function Home() {
   const cookieStore = await cookies();
   const userString = cookieStore.get("user");
+
+  if (!userString) return redirect("/login");
+
   const user = JSON.parse(userString?.value || "");
+
   return (
     <section className="flex flex-col gap-3 rounded-xl">
       <div className="h-full flex justify-between items-end">

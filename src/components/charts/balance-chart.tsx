@@ -6,7 +6,7 @@ import {
   RadialBar,
   RadialBarChart,
 } from "recharts";
-import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+import { ChartConfig, ChartContainer } from "../ui/chart";
 
 export function BalanceChart({
   values,

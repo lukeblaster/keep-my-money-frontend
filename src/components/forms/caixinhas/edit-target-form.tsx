@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
 import { PencilLine } from "lucide-react";
 import { useState } from "react";
 

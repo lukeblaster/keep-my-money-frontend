@@ -1,5 +1,5 @@
-import { AddBankAccountForm } from "@/components/forms/bank-account/add-bank-account";
-import { Button } from "@/components/ui/button";
+import { AddBankAccountForm } from "../../../components/forms/bank-account/add-bank-account";
+import { Button } from "../../../components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "../../../components/ui/dialog";
 import { PlusCircle } from "lucide-react";
-import { BanksContainer } from "@/components/containers/banks-container";
+import { BanksContainer } from "../../../components/containers/banks-container";
 
 export default function Banks() {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -9,10 +9,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../../ui/dialog";
+import { DropdownMenuItem } from "../../ui/dropdown-menu";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
 import { Row } from "@tanstack/react-table";
 import { Pencil } from "lucide-react";
 import { useState } from "react";
@@ -20,10 +20,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
-import { updateCategory } from "@/api/category/update-category";
-import { Category } from "@/types/category";
+import { updateCategory } from "../../../api/category/update-category";
+import { Category } from "../../../types/category";
 import { toast } from "sonner";
-import { ApiError } from "@/types/error";
+import { ApiError } from "../../../types/error";
 
 const editTransactionSchema = z.object({
   name: z.string().min(3, { message: "São necessários 3 ou mais caracteres." }),

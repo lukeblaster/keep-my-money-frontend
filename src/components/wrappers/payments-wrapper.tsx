@@ -1,5 +1,5 @@
 "use client";
-import { BankAccount } from "@/types/bank-account";
+import { BankAccount } from "../../types/bank-account";
 import { useQuery } from "@tanstack/react-query";
 import {
   Breadcrumb,
@@ -8,14 +8,14 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
+} from "../ui/breadcrumb";
 import { AddPaymentForm } from "../forms/payment-forms/add-payment-form";
-import { getBankById } from "@/api/banks/get-bank-id";
+import { getBankById } from "../../api/banks/get-bank-id";
 import { PaymentCard } from "../cards/payment-card";
 import { PencilLine, Trash } from "lucide-react";
 import { useState } from "react";
 import { EditBankAccount } from "../forms/bank-account/edit-bank-account";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger } from "../ui/dialog";
 import { DeleteBankAccount } from "../forms/bank-account/delete-bank-account";
 
 export function PaymentsWrapper({ id }: { id: string }) {

@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "../../ui/card";
 import { Wallet } from "lucide-react";
 import { PaymentFormCardSkeleton } from "./skeleton";
 

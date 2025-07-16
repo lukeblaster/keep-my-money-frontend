@@ -1,7 +1,7 @@
 "use client";
 import { transactionColumns } from "../columns/transactions-columns";
 import { ResumeCardsWrapper } from "../wrappers/resume-cards-wrapper";
-import { TransactionTable } from "@/components/tables/transaction-table";
+import { TransactionTable } from "../tables/transaction-table";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -9,13 +9,13 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
+} from "../ui/breadcrumb";
 import { AddTransactionForm } from "../forms/transactions/add-transaction-form";
-import { useTransactionsData } from "@/hooks/query/use-transactions-data";
+import { useTransactionsData } from "../../hooks/query/use-transactions-data";
 import {
   TransactionAdapter,
   TransactionAdapterProps,
-} from "@/adapters/transaction-adapter";
+} from "../../adapters/transaction-adapter";
 
 export function TransactionsContainer({
   year,

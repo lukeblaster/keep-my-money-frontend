@@ -1,9 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Dialog, DialogTrigger } from "../ui/dialog";
 import { CreditCard, XCircle } from "lucide-react";
 import { DeletePaymentForm } from "../forms/payment-forms/delete-payment-form";
 import { EditPaymentForm } from "../forms/payment-forms/edit-payment-form";
-import { PaymentMethod } from "@/types/payment-method";
+import { PaymentMethod } from "../../types/payment-method";
 
 interface PaymentCard {
   id: number;

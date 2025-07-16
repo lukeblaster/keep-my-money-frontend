@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import { Scale } from "lucide-react";
 import { BalanceChart } from "../charts/balance-chart";
 

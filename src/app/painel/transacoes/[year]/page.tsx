@@ -1,4 +1,4 @@
-import { MonthsContainer } from "@/components/containers/months-container";
+import { MonthsContainer } from "../../../../components/containers/months-container";
 
 export default async function Page({
   params,

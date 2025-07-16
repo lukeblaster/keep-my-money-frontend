@@ -1,6 +1,6 @@
 "use client";
-import { deleteBank } from "@/api/banks/delete-bank";
-import { Button } from "@/components/ui/button";
+import { deleteBank } from "../../../api/banks/delete-bank";
+import { Button } from "../../ui/button";
 import {
   DialogContent,
   DialogHeader,
@@ -8,13 +8,13 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+} from "../../ui/dialog";
+import { Input } from "../../ui/input";
 import {
   DeleteBankAccountInput,
   DeleteBankAccountSchema,
-} from "@/schema/bank-account";
-import { ApiError } from "@/types/error";
+} from "../../../schema/bank-account";
+import { ApiError } from "../../../types/error";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useForm, SubmitHandler } from "react-hook-form";

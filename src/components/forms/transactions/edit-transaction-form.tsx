@@ -6,7 +6,7 @@ import { Row } from "@tanstack/react-table";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TransactionOnMonth } from "../../columns/transactions-columns";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -16,31 +16,31 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../../ui/dialog";
+import { DropdownMenuItem } from "../../ui/dropdown-menu";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../ui/select";
 import { Pencil } from "lucide-react";
-import { useCategoryData } from "@/hooks/query/use-category-data";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Category } from "@/types/category";
+import { useCategoryData } from "../../../hooks/query/use-category-data";
+import { FormInputError } from "../../errors/form-input-error";
+import { Category } from "../../../types/category";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
-import { updateTransactionOnMonth } from "@/api/transactions/update-transaction-month";
-import { BankAccount } from "@/types/bank-account";
-import { PaymentMethod } from "@/types/payment-method";
-import { useBanksData } from "@/hooks/query/use-banks-data";
+import { updateTransactionOnMonth } from "../../../api/transactions/update-transaction-month";
+import { BankAccount } from "../../../types/bank-account";
+import { PaymentMethod } from "../../../types/payment-method";
+import { useBanksData } from "../../../hooks/query/use-banks-data";
 import { toast } from "sonner";
-import { ApiError } from "@/types/error";
-import { Switch } from "@/components/ui/switch";
-import { TransactionAdapterProps } from "@/adapters/transaction-adapter";
-import { TransactionRowAdapter } from "@/adapters/transaction-row-adapter";
+import { ApiError } from "../../../types/error";
+import { Switch } from "../../ui/switch";
+import { TransactionAdapterProps } from "../../../adapters/transaction-adapter";
+import { TransactionRowAdapter } from "../../../adapters/transaction-row-adapter";
 
 const editTransactionSchema = z.object({
   description: z

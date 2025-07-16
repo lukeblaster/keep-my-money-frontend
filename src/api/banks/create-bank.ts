@@ -1,4 +1,4 @@
-import { CreateBankAccountInput } from "./../../schema/bank-account";
+import { CreateBankAccountInput } from "../../schema/bank-account";
 import { instance as axios } from "../axios";
 
 export const createBank = async (props: CreateBankAccountInput) => {

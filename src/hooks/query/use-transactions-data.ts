@@ -1,4 +1,4 @@
-import { getTransactions } from "@/api/transactions/get-transactions";
+import { getTransactions } from "../../api/transactions/get-transactions";
 import { useQuery } from "@tanstack/react-query";
 
 export const useTransactionsData = ({

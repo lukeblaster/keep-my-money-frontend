@@ -1,13 +1,13 @@
 "use client";
-import { updateBankAccount } from "@/api/banks/update-bank";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { updateBankAccount } from "../../../api/banks/update-bank";
+import { FormInputError } from "../../errors/form-input-error";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
 import {
   UpdateBankAccountInput,
   UpdateBankAccountSchema,
-} from "@/schema/bank-account";
-import { ApiError } from "@/types/error";
+} from "../../../schema/bank-account";
+import { ApiError } from "../../../types/error";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label } from "@radix-ui/react-label";
 import { useQueryClient, useMutation } from "@tanstack/react-query";

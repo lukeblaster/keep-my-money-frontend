@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Outfit } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "../components/ui/sonner";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -16,6 +16,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Keep My Money",
   description: "Sistema para controle de gastos",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

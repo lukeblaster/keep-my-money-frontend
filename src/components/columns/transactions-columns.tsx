@@ -1,19 +1,19 @@
 "use client";
 import { ColumnDef } from "@tanstack/react-table";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu";
 import { TransactionCard } from "../cards/transaction-card";
 import { EditTransactionForm } from "../forms/transactions/edit-transaction-form";
-import { Category } from "@/types/category";
+import { Category } from "../../types/category";
 import { DeleteTransactionOnMonthForm } from "../forms/transactions/delete-transaction-month-form";
-import { BankAccount } from "@/types/bank-account";
-import { PaymentMethod } from "@/types/payment-method";
+import { BankAccount } from "../../types/bank-account";
+import { PaymentMethod } from "../../types/payment-method";
 
 // export type TransactionType = "ganho" | "despesa" | "investimento";
 

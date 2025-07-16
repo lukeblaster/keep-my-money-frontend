@@ -1,15 +1,15 @@
 "use client";
-import { createBank } from "@/api/banks/create-bank";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
-import { DialogClose, DialogFooter } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { createBank } from "../../../api/banks/create-bank";
+import { FormInputError } from "../../errors/form-input-error";
+import { Button } from "../../ui/button";
+import { DialogClose, DialogFooter } from "../../ui/dialog";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
 import {
   CreateBankAccountInput,
   CreateBankAccountSchema,
-} from "@/schema/bank-account";
-import { ApiError } from "@/types/error";
+} from "../../../schema/bank-account";
+import { ApiError } from "../../../types/error";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useForm, SubmitHandler } from "react-hook-form";

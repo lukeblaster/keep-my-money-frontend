@@ -17,9 +17,9 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { useMutation } from "@tanstack/react-query";
-import { signOut } from "@/api/auth/sign-out";
+import { signOut } from "../../api/auth/sign-out";
 import { Profile } from "./profile";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 export const MenuButton = () => {
   const isMobile = useIsMobile();

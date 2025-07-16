@@ -1,5 +1,5 @@
 import { instance as axios } from "../axios";
-import { Month } from "@/types/months";
+import { Month } from "../../types/months";
 
 export const getYears = async (): Promise<Month[]> => {
   try {

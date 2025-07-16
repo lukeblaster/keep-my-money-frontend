@@ -1,8 +1,8 @@
-import { createPaymentMethod } from "@/api/payment-method/create-payment-method";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { createPaymentMethod } from "../../../api/payment-method/create-payment-method";
+import { FormInputError } from "../../errors/form-input-error";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
 import {
   Select,
   SelectContent,
@@ -11,8 +11,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { ApiError } from "@/types/error";
+} from "../../ui/select";
+import { ApiError } from "../../../types/error";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { PlusCircle } from "lucide-react";

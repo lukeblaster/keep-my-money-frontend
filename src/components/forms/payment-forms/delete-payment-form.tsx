@@ -1,6 +1,6 @@
 "use client";
-import { deletePaymentMethod } from "@/api/payment-method/delete-payment-method";
-import { Button } from "@/components/ui/button";
+import { deletePaymentMethod } from "../../../api/payment-method/delete-payment-method";
+import { Button } from "../../ui/button";
 import {
   DialogContent,
   DialogHeader,
@@ -8,9 +8,9 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from "@/components/ui/dialog";
-import { ApiError } from "@/types/error";
-import { PaymentMethod } from "@/types/payment-method";
+} from "../../ui/dialog";
+import { ApiError } from "../../../types/error";
+import { PaymentMethod } from "../../../types/payment-method";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useForm, SubmitHandler } from "react-hook-form";

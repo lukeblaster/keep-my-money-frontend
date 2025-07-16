@@ -1,7 +1,7 @@
-import { TransactionOnMonth } from "./../components/columns/transactions-columns";
-import { PaymentMethod } from "@/types/payment-method";
-import { BankAccount } from "@/types/bank-account";
-import { Category } from "@/types/category";
+import { TransactionOnMonth } from "../components/columns/transactions-columns";
+import { PaymentMethod } from "../types/payment-method";
+import { BankAccount } from "../types/bank-account";
+import { Category } from "../types/category";
 import { Row } from "@tanstack/react-table";
 
 export interface TransactionAdapterProps {

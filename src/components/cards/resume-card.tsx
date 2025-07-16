@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardContent } from "../ui/card";
 import { ReactElement } from "react";
 
 export function ResumeCard({

@@ -1,15 +1,15 @@
 import { ColumnDef } from "@tanstack/react-table";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { MoreHorizontal } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu";
 import { EditCategoryForm } from "../forms/categories/edit-category-form";
 import { useState } from "react";
 import { DeleteCategoryForm } from "../forms/categories/delete-category-form";
-import { Category } from "@/types/category";
+import { Category } from "../../types/category";
 
 function getTextColor(bgColor: string) {
   // Converte hex para RGB e calcula o brilho

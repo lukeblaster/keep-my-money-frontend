@@ -5,7 +5,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "../ui/chart";
 import { Skeleton } from "../ui/skeleton";
 
 export function SpendingPerCategory({

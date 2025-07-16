@@ -1,8 +1,8 @@
 "use client";
-import { deleteTransactionOnMonth } from "@/api/transactions/delete-transaction-month";
-import { TransactionOnMonth } from "@/components/columns/transactions-columns";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
+import { deleteTransactionOnMonth } from "../../../api/transactions/delete-transaction-month";
+import { TransactionOnMonth } from "../../columns/transactions-columns";
+import { FormInputError } from "../../errors/form-input-error";
+import { Button } from "../../ui/button";
 import {
   DialogContent,
   DialogHeader,
@@ -12,8 +12,8 @@ import {
   DialogClose,
   Dialog,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+} from "../../ui/dialog";
+import { DropdownMenuItem } from "../../ui/dropdown-menu";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { Row } from "@tanstack/react-table";

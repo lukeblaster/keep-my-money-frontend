@@ -1,9 +1,9 @@
 "use client";
-import { signUp } from "@/api/auth/sign-up";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ApiError } from "@/types/error";
+import { signUp } from "../../../api/auth/sign-up";
+import { FormInputError } from "../../../components/errors/form-input-error";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { ApiError } from "../../../types/error";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label } from "@radix-ui/react-label";
 import { useQueryClient, useMutation } from "@tanstack/react-query";

@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { BankAccount } from "@/types/bank-account";
+import { Card, CardContent } from "../ui/card";
+import { BankAccount } from "../../types/bank-account";
 import { Bitcoin, CreditCard, HandCoins, Landmark } from "lucide-react";
 
 export function BankCard({ props }: { props: BankAccount }) {

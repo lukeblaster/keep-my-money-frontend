@@ -9,7 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "../ui/sidebar";
 import { Home } from "lucide-react";
 import { LuArrowUpDown, LuLandmark, LuPiggyBank, LuTags } from "react-icons/lu";
 import { SidebarItemPartial } from "./sidebar-items-partial";

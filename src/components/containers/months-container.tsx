@@ -1,5 +1,5 @@
 "use client";
-import { Month } from "@/types/months";
+import { Month } from "../../types/months";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -7,12 +7,12 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
-import { Card, CardContent } from "@/components/ui/card";
+} from "../ui/breadcrumb";
+import { Card, CardContent } from "../ui/card";
 import { CalendarDays } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useMonthsData } from "@/hooks/query/use-months-data";
+import { useMonthsData } from "../../hooks/query/use-months-data";
 
 export function MonthsContainer({ year }: { year: number }) {
   const pathname = usePathname();

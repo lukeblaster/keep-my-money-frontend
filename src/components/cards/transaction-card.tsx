@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -8,15 +8,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+} from "../ui/dialog";
+import { DropdownMenuItem } from "../ui/dropdown-menu";
 import { Row } from "@tanstack/react-table";
 import { Eye } from "lucide-react";
 import { useState } from "react";
-import { TransactionRowAdapter } from "@/adapters/transaction-row-adapter";
-import { BankAccount } from "@/types/bank-account";
-import { Category } from "@/types/category";
-import { PaymentMethod } from "@/types/payment-method";
+import { TransactionRowAdapter } from "../../adapters/transaction-row-adapter";
+import { BankAccount } from "../../types/bank-account";
+import { Category } from "../../types/category";
+import { PaymentMethod } from "../../types/payment-method";
 import { TransactionOnMonth } from "../columns/transactions-columns";
 
 interface TransactionCardProps {

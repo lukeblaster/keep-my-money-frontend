@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { createMonths } from "@/api/months/create-year-months";
-import { FormInputError } from "@/components/errors/form-input-error";
-import { Button } from "@/components/ui/button";
+import { createMonths } from "../../../api/months/create-year-months";
+import { FormInputError } from "../../errors/form-input-error";
+import { Button } from "../../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -12,17 +12,20 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { CreateYearMonthInput, CreateYearMonthsSchema } from "@/schema/year";
+} from "../../ui/dialog";
+import { Input } from "../../ui/input";
+import { Label } from "../../ui/label";
+import {
+  CreateYearMonthInput,
+  CreateYearMonthsSchema,
+} from "../../../schema/year";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import { Info, PlusCircle } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { ApiError } from "@/types/error";
+import { ApiError } from "../../../types/error";
 
 export function AddYearMonthsForm() {
   const {
