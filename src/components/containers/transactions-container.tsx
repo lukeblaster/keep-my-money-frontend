@@ -11,11 +11,11 @@ import {
   BreadcrumbPage,
 } from "../ui/breadcrumb";
 import { AddTransactionForm } from "../forms/transactions/add-transaction-form";
-import { useTransactionsData } from "../../hooks/query/use-transactions-data";
+import { useTransactionsData } from "@/hooks/query/use-transactions-data";
 import {
   TransactionAdapter,
   TransactionAdapterProps,
-} from "../../adapters/transaction-adapter";
+} from "@/adapters/transaction-adapter";
 import Link from "next/link";
 
 export function TransactionsContainer({

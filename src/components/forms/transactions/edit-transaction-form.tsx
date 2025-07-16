@@ -112,6 +112,7 @@ export function EditTransactionForm({
     mutationFn: updateTransactionOnMonth,
     onSuccess: (response) => {
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
+      queryClient.invalidateQueries({ queryKey: ["dashboard"] });
       setOpenDialog(false);
       toast.success(response.data.message);
     },

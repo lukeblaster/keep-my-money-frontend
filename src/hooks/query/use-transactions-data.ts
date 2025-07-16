@@ -9,7 +9,7 @@ export const useTransactionsData = ({
   year: number;
 }) => {
   return useQuery({
-    queryKey: ["transactions", [year, month_name]],
+    queryKey: ["transactions", { year, month_name }],
     queryFn: () => getTransactions({ year, month_name }),
     staleTime: 1000 * 60 * 5,
     refetchOnWindowFocus: false,

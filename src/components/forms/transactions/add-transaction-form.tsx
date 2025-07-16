@@ -83,7 +83,12 @@ export function AddTransactionForm({
   const mutation = useMutation({
     mutationFn: createTransaction,
     onSuccess: (response) => {
-      queryClient.invalidateQueries({ queryKey: ["transactions"] });
+      queryClient.invalidateQueries({
+        queryKey: ["transactions", { month_name, year }],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["dashboard"],
+      });
       toast.success(response.data.message);
       reset();
       setIsDialogOpen(false);

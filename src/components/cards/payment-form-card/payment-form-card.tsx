@@ -9,7 +9,7 @@ export function PaymentFormCard({
 }) {
   return (
     <>
-      {values ? (
+      {values.length > 1 ? (
         <Card className="w-full">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
