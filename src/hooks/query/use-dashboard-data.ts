@@ -7,6 +7,5 @@ export const useDashboardData = () => {
     queryFn: getDashboardInfo,
     staleTime: 1000 * 60 * 10,
     refetchOnWindowFocus: false,
-    refetchOnMount: false,
   });
 };
