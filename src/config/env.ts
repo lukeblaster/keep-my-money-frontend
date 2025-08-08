@@ -9,7 +9,7 @@ const envSchema = z.object({
   NODE_ENV: z
     .enum(["development", "production", "test"])
     .default("development"),
-  BACKEND_URL: z.string().url(),
+  NEXT_PUBLIC_BACKEND_URL: z.string().url(),
 });
 
 const _env = envSchema.safeParse(process.env);

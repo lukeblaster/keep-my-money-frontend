@@ -27,6 +27,7 @@ export const LoginForm = () => {
     mutationFn: signIn,
     onSuccess: (response) => {
       toast.success(response.data.message);
+      localStorage.setItem("user", JSON.stringify(response.data.data.userInfo))
       document.location.href = "/painel/dashboard";
     },
     onError: (e: AxiosError) => {
@@ -34,6 +35,7 @@ export const LoginForm = () => {
       toast.warning(error.message);
     },
   });
+
   const onSubmit: SubmitHandler<LoginInput> = (data) => {
     const props = {
       email: data.email,
