@@ -27,8 +27,10 @@ export const EditTransactions = ({
   setStep,
   month_name,
   year,
+  setIsDialogOpen,
 }: {
   setStep: Dispatch<SetStateAction<string>>;
+  setIsDialogOpen: Dispatch<SetStateAction<boolean>>;
   month_name: string;
   year: number;
 }) => {
@@ -59,6 +61,7 @@ export const EditTransactions = ({
         queryKey: ["transactions", [year, month_name]],
       });
       toast.success(response.data.message);
+      setIsDialogOpen(false);
       reset();
     },
   });

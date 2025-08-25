@@ -44,6 +44,7 @@ export const ImportTransactionDialog = ({
           <EditTransactions
             month_name={month_name}
             year={year}
+            setIsDialogOpen={setIsDialogOpen}
             setStep={setStep}
           />
         );
