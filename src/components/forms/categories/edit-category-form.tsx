@@ -20,10 +20,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
-import { updateCategory } from "../../../api/category/update-category";
-import { Category } from "../../../types/category";
+import { updateCategory } from "@/api/category/update-category";
+import { Category } from "@/types/category";
 import { toast } from "sonner";
-import { ApiError } from "../../../types/error";
+import { ApiError } from "@/types/error";
 
 const editTransactionSchema = z.object({
   name: z.string().min(3, { message: "São necessários 3 ou mais caracteres." }),
@@ -55,13 +55,13 @@ export function EditCategoryForm({ row }: { row: Row<Category> }) {
   });
 
   const onSubmit: SubmitHandler<EditTransactionFormData> = (data) => {
-    const props = {
-      id: row.getValue("id"),
-      name: data.name,
-      color: data.color,
-    };
-
-    return mutation.mutate({ props: props });
+    return mutation.mutate({
+      props: {
+        id: row.getValue("id"),
+        name: data.name,
+        color: data.color,
+      },
+    });
   };
 
   return (
@@ -108,9 +108,7 @@ export function EditCategoryForm({ row }: { row: Row<Category> }) {
           </div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button type="submit" variant="outline">
-                Cancelar
-              </Button>
+              <Button variant="outline">Cancelar</Button>
             </DialogClose>
             <Button
               type="submit"

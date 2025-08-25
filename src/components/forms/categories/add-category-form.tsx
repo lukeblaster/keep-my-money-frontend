@@ -34,6 +34,7 @@ export function AddCategoryForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<AddTransactionFormData>({
     resolver: zodResolver(addTransactionSchema),
   });
@@ -43,6 +44,7 @@ export function AddCategoryForm() {
     onSuccess: (response) => {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       toast.success(response.data.message);
+      reset();
     },
     onError: (error: ApiError) => {
       toast.error(error.message);
@@ -87,9 +89,7 @@ export function AddCategoryForm() {
             </div>
             <DialogFooter>
               <DialogClose asChild>
-                <Button type="submit" variant="outline">
-                  Cancelar
-                </Button>
+                <Button variant="outline">Cancelar</Button>
               </DialogClose>
               <Button
                 type="submit"

@@ -17,6 +17,7 @@ import {
   TransactionAdapterProps,
 } from "../../adapters/transaction-adapter";
 import Link from "next/link";
+import { ImportTransactionDialog } from "../forms/transactions/import-transactions-dialog";
 
 export function TransactionsContainer({
   year,
@@ -59,7 +60,10 @@ export function TransactionsContainer({
         <h3 className="font-semibold text-2xl capitalize">
           {month_name == "marco" ? "março" : (month_name as string)}
         </h3>
-        <AddTransactionForm month_name={month_name} year={year} />
+        <div className="space-x-1.5">
+          <AddTransactionForm month_name={month_name} year={year} />
+          <ImportTransactionDialog month_name={month_name} year={year} />
+        </div>
       </div>
       <section className="flex flex-col">
         <ResumeCardsWrapper transactions={transactions} />
