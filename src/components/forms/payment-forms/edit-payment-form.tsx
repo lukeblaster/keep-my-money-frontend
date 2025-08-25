@@ -1,7 +1,7 @@
 "use client";
-import { updatePaymentMethod } from "../../../api/payment-method/update-payment-method";
+import { updatePaymentMethod } from "@/api/payment-method/update-payment-method";
 import { FormInputError } from "../../errors/form-input-error";
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DialogClose,
   DialogContent,
@@ -9,8 +9,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "../../ui/dialog";
-import { Input } from "../../ui/input";
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -19,8 +19,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "../../ui/select";
-import { ApiError } from "../../../types/error";
+} from "@/components/ui/select";
+import { ApiError } from "@/types/error";
 import { PaymentMethod } from "../../../types/payment-method";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label } from "@radix-ui/react-label";

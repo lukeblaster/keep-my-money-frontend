@@ -65,7 +65,7 @@ export function DeleteEntityForm({
         </DialogHeader>
         <DialogFooter className="mt-6">
           <DialogClose asChild>
-            <Button type="submit">Cancelar</Button>
+            <Button variant="outline">Cancelar</Button>
           </DialogClose>
           <DialogClose asChild>
             <Button type="submit" variant="destructive">

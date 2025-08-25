@@ -1,5 +1,5 @@
 "use client";
-import { deleteTransactionOnMonth } from "../../../api/transactions/delete-transaction-month";
+import { deleteTransactionOnMonth } from "@/api/transactions/delete-transaction-month";
 import { TransactionOnMonth } from "../../columns/transactions-columns";
 import { FormInputError } from "../../errors/form-input-error";
 import { Button } from "../../ui/button";
@@ -58,11 +58,12 @@ export function DeleteTransactionOnMonthForm({
     },
   });
 
-  const onSubmit: SubmitHandler<DeleteTransactionFormData> = (data) => {
-    const props = {
-      id: transactionOnMonth[0].id,
-    };
-    const response = mutation.mutate({ props: props });
+  const onSubmit: SubmitHandler<DeleteTransactionFormData> = () => {
+    const response = mutation.mutate({
+      props: {
+        id: transactionOnMonth[0].id,
+      },
+    });
 
     return response;
   };
@@ -91,9 +92,7 @@ export function DeleteTransactionOnMonthForm({
           <FormInputError>{errors.id?.message}</FormInputError>
           <DialogFooter className="mt-6">
             <DialogClose asChild>
-              <Button type="submit" variant="outline">
-                Cancelar
-              </Button>
+              <Button variant="outline">Cancelar</Button>
             </DialogClose>
             <DialogClose asChild>
               <Button

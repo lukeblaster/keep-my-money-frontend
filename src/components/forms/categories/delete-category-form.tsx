@@ -49,11 +49,11 @@ export function DeleteCategoryForm({ row }: { row: Row<Category> }) {
   });
 
   const onSubmit: SubmitHandler<DeleteTransactionFormData> = (data) => {
-    const props = {
-      id: data.id,
-    };
-
-    return mutation.mutate({ props: props });
+    return mutation.mutate({
+      props: {
+        id: data.id,
+      },
+    });
   };
 
   return (
@@ -89,9 +89,7 @@ export function DeleteCategoryForm({ row }: { row: Row<Category> }) {
           />
           <DialogFooter className="mt-6">
             <DialogClose asChild>
-              <Button type="submit" variant="outline">
-                Cancelar
-              </Button>
+              <Button variant="outline">Cancelar</Button>
             </DialogClose>
             <Button
               type="submit"

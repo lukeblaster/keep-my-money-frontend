@@ -58,9 +58,7 @@ export function DeletePaymentForm({ props }: { props: PaymentMethod }) {
         </DialogHeader>
         <DialogFooter className="mt-6">
           <DialogClose asChild>
-            <Button type="submit" variant="outline">
-              Cancelar
-            </Button>
+            <Button variant="outline">Cancelar</Button>
           </DialogClose>
           <DialogClose asChild>
             <Button

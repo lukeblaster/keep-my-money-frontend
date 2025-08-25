@@ -41,11 +41,9 @@ export function DeleteBankAccount(props: DeleteBankAccountInput) {
   });
 
   const onSubmit: SubmitHandler<DeleteBankAccountInput> = (data) => {
-    const props = {
+    return mutation.mutate({
       id: data.id,
-    };
-
-    return mutation.mutate(props);
+    });
   };
   return (
     <DialogContent className="w-96">
@@ -61,9 +59,7 @@ export function DeleteBankAccount(props: DeleteBankAccountInput) {
         />
         <DialogFooter className="mt-6">
           <DialogClose asChild>
-            <Button type="submit" variant="outline">
-              Cancelar
-            </Button>
+            <Button variant="outline">Cancelar</Button>
           </DialogClose>
           <Button
             type="submit"
